@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/styles/profile-edit.css" />
+
+<div class="profile-container">
+    <h2 class="form-title">Úprava profilu</h2>
+
+    <form method="POST" action="/profile/edit?user=<%= user.id %>" enctype="multipart/form-data" class="edit-form">
+        <input type="text" name="name" value="<%= user.name %>" placeholder="Jméno" required />
+        <input type="number" name="age" value="<%= user.age %>" placeholder="Věk" required />
+        <textarea name="bio" placeholder="O tobě..." required><%= user.bio %></textarea>
+        <input type="file" name="image" accept="image/*" />
+        <button type="submit" class="btn primary">Uložit změny</button>
+    </form>
+
+    <a href="/profile?user=<%= user.id %>" class="back-link">← Zpět na profil</a>
+</div>

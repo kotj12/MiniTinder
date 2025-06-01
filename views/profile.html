@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Můj profil</title>
+    <link rel="stylesheet" href="/styles/profile.css" />
+</head>
+
+<body>
+    <div class="profile-container">
+        <h2>Můj profil</h2>
+        <img src="<%= user.imageUrl %>" alt="profilovka" class="profile-img" />
+
+        <p class="profile-name"><strong>
+                <%= user.name %>
+            </strong>, <%= user.age %> let</p>
+        <p class="profile-bio">
+            <%= user.bio %>
+        </p>
+
+        <div class="profile-actions">
+            <a href="/profile/edit?user=<%= user.id %>">
+                <button class="btn primary">Upravit profil</button>
+            </a>
+
+            <form action="/profile/delete?user=<%= user.id %>" method="POST"
+                onsubmit="return confirm('Opravdu chceš smazat svůj účet? Tuto akci nelze vrátit.')">
+                <button class="btn danger">Smazat profil</button>
+            </form>
+        </div>
+
+        <a href="/?user=<%= user.id %>" class="back-link">← Zpět na hlavní stránku</a>
+    </div>
+
+</body>
+
+</html>

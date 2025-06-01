@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(to right, #8360c3, #2ebf91);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.profile-container {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #2ebf91;
+}
+
+.edit-form input,
+.edit-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.edit-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.primary {
+    background-color: #2ebf91;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #25a87c;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2ebf91;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline; }
+    

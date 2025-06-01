@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniTinder – Úvod</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+</head>
+
+<body>
+    <div class="profile-container">
+        <img class="profile-img" src="<%= currentUser.imageUrl %>" alt="profilovka" />
+        <h2 class="profile-name">Vítej, <%= currentUser.name %>!</h2>
+
+        <div class="profile-actions">
+            <a href="/profile?user=<%= currentUser.id %>" class="btn primary">Můj profil</a>
+            <a href="/matches?user=<%= currentUser.id %>" class="btn primary">Matchování</a>
+            <form action="/auth/logout" method="POST">
+                <button class="btn danger">Odhlásit se</button>
+            </form>
+        </div>
+
+        <hr />
+
+        <% if (targetUser) { %>
+            <div class="rate-section">
+                <h3>Koho hodnotíš?</h3>
+                <div class="rate-profile">
+                    <img src="<%= targetUser.imageUrl %>" alt="cílový uživatel" class="profile-img" />
+                    <p class="profile-name">
+                        <strong>
+                            <%= targetUser.name %>
+                        </strong>, <%= targetUser.age %> let
+                    </p>
+                    <p class="profile-bio">
+                        <%= targetUser.bio %>
+                    </p>
+                </div>
+
+                <div class="rate-buttons">
+                    <form action="/dislike/<%= targetUser.id %>?user=<%= currentUser.id %>" method="POST">
+                        <button type="submit" class="btn-dislike">Nelíbí se mi</button>
+                    </form>
+                    <form action="/like/<%= targetUser.id %>?user=<%= currentUser.id %>" method="POST">
+                        <button type="submit" class="btn-like">Líbí se mi</button>
+                    </form>
+                </div>
+            </div>
+            <% } else { %>
+                <p><em>Momentálně nejsou žádní uživatelé k hodnocení.</em></p>
+                <% } %>
+    </div>
+
+
+</body>
+
+</html>

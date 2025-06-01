@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(to right, #8360c3, #2ebf91);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.profile-container {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #eee;
+}
+
+.profile-name {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.profile-bio {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.primary {
+    background-color: #2ebf91;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #25a87c;
+}
+
+.danger {
+    background-color: #ff4d4f;
+    color: white;
+}
+
+.danger:hover {
+    background-color: #d9363e;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline; }

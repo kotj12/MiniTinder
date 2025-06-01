@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/styles/register.css">
+
+<div class="register-container">
+    <h1>Registrace</h1>
+
+    <form method="POST" action="/auth/register" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Jméno" required />
+        <input type="password" name="password" placeholder="Heslo" required />
+        <input type="number" name="age" placeholder="Věk" required />
+        <input type="file" name="image" accept="image/*" required />
+        <textarea name="bio" placeholder="O tobě..." required></textarea>
+        <button class="btn" type="submit">Zaregistrovat se</button>
+    </form>
+
+    <a class="login-link" href="/auth/login">Už máš účet? Přihlaš se</a>
+</div>

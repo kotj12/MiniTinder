@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/styles/matches.css" />
+<div class="profile-container">
+    <h2 class="profile-name">Tvoje matche</h2>
+
+    <% if (matches.length===0) { %>
+        <p class="no-users">Zatím žádné shody.</p>
+        <% } else { %>
+            <div class="match-list">
+                <% matches.forEach(match=> { %>
+                    <div class="match-card">
+                        <img src="<%= match.imageUrl %>" alt="profilovka" class="match-img" />
+                        <div class="match-info">
+                            <div class="match-name">
+                                <%= match.name %>, <%= match.age %> let
+                            </div>
+                            <div class="match-bio">
+                                <%= match.bio %>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+            <% } %>
+
+                <a href="/?user=<%= user.id %>" class="back-link">Zpět na hlavní stránku</a>
+</div>

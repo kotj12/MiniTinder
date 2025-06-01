@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/styles/login.css">
+
+<div class="login-container">
+    <h1>Přihlášení</h1>
+
+    <% if (error==='notfound' ) { %>
+        <script>alert("Uživatel neexistuje.");</script>
+        <% } else if (error==='invalid' ) { %>
+            <script>alert("Špatné heslo.");</script>
+            <% } %>
+
+                <form method="POST" action="/auth/login">
+                    <input type="text" name="name" placeholder="Jméno" required />
+                    <input type="password" name="password" placeholder="Heslo" required />
+                    <button class="btn" type="submit">Přihlásit se</button>
+                </form>
+
+                <a class="register-link" href="/auth/register">Zaregistruj se</a>
+</div>
